@@ -111,7 +111,7 @@ button:hover{
     pointer-events: none;
 } */ 
 
-a{
+/* a{
     text-decoration: none;
 }
 
@@ -188,4 +188,11 @@ button{
 
     opacity: 0;
     pointer-events: none;
+} */
+
+form{
+    margin-left:auto;
+    margin-right: auto;
+    width: 312px;
+    border: 1px solid black;
 }
