@@ -1,3 +1,6 @@
+ul{
+    list-style: none;
+}
 /* .box{
     position: relative;
 
@@ -190,9 +193,60 @@ button{
     pointer-events: none;
 } */
 
-form{
+/* form{
     margin-left:auto;
     margin-right: auto;
     width: 312px;
     border: 1px solid black;
+} */
+
+.field{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+}
+
+.icon{
+    position: absolute;
+
+    top: 30px;
+    left: 10px;
+
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: purple;
+}
+
+.field input{
+    width: 150px;
+    height: 30px;
+
+    padding-left: 25px;
+
+    outline: none;
+}
+
+/* .field input:focus + .icon,
+.field input:hover + .icon{
+    background-color: blue;
+}
+
+.field input:focus,
+.field input:hover{
+    border-color: blue;
+} */
+
+.field:focus-within .icon{
+    background-color: blue;
+}
+
+.field:focus-within input{
+    border-color: blue;
+    border-radius: 4px;
 }
