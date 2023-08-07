@@ -200,7 +200,7 @@ button{
     border: 1px solid black;
 } */
 
-.field{
+/* .field{
     position: relative;
 
     display: flex;
@@ -230,7 +230,7 @@ button{
     padding-left: 25px;
 
     outline: none;
-}
+} */
 
 /* .field input:focus + .icon,
 .field input:hover + .icon{
@@ -242,11 +242,61 @@ button{
     border-color: blue;
 } */
 
-.field:focus-within .icon{
+/* .field:focus-within .icon{
     background-color: blue;
 }
 
 .field:focus-within input{
     border-color: blue;
     border-radius: 4px;
+} */
+
+button{
+    position: relative;
+    display: inline-flex;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin: 30px 30px;
+    padding: 5px 15px;
+    cursor: pointer;
+
+    transition: 
+    background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 350ms;
+
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: rgb(254, 0, 169);
+    color: black;
+}
+
+button::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+    margin-right: 10px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover::before{
+    transform: translateY(-35px);
+}
+
+button::after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transform: translateY(35px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover::after{
+    transform: translate(0);
 }
